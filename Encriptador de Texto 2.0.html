@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto -  Challenge 1</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <div class="contenedor">
+        <div>
+            <img src="Assets/Vector.png" class="logoimg" >
+            <h1 class="titulo">Encriptador de Mensajes</h1>
+        </div>
+
+        <div class="box1">
+            <textarea class="areatxt" id="b1" placeholder="Ingrese el texto aquí" cols="30" rows="10"></textarea>
+        </div>
+
+        <div class="box2">
+            <img src="Assets/prodman no F.png" class="imgbox2" id="img2">
+            <p id="mns">
+                Ningún mensaje fue encontrado
+            </p>
+            <textarea class="txt2" id="texto2" placeholder="Ingresa aquí el mensaje que deseas encriptar o desencriptar" cols="30" rows="10"></textarea>
+            <button onclick="copy()" class="copiar" id="copy">Copiar</button>
+        </div>
+
+        <div class="aviso">
+            <p>&#10069; Solo letras minúsculas y no acentos</p>
+        </div>
+
+        <div class="controles">
+            <button onclick="encriptar()" class="boton1" >Encriptar</button>
+            <button onclick="desencriptar()" class="boton2">Desencriptar</button>
+        </div>
+    </div>
+
+    <footer>
+
+        <img class="datosDev" src="Assets/datosdev.png">
+    </footer>
+    
+    
+</body>
+</html>
+
+<script>
+
+    var cajaTxt2 = document.getElementById("texto2");
+
+    function recuperarTxt() {
+        var textoEncriptado = document.getElementById("b1");       
+        return textoEncriptado.value.toLowerCase()
+    }
+
+    function modificacionCss() {
+    
+     document.getElementById("img2").style.display = "none";
+     document.getElementById("mns").style.display= "none";
+     document.getElementById("copy").style.display = "block";     
+           
+    }
+
+   
+
+    function pasarTxt() {
+        cajaTxt2.textContent = proceso(recuperarTxt())
+    
+    }
+
+    function encriptar() {
+        modificacionCss()        
+        pasarTxt()     
+        
+    }
+
+    function copy() {
+        cajaTxt2.select()
+        navigator.clipboard.writeText(cajaTxt2.value);
+
+        
+    }
+
+    function proceso(mensaje) {
+        var texto = mensaje;
+        var procesoT ="";
+
+        for (let i = 0; i < texto.length; i++) {
+            if (texto[i]== "e") {
+                procesoT = procesoT + "enter";
+            }
+            else if (texto[i]== "o") {
+                procesoT = procesoT + "ober";
+            }
+            else if (texto[i]== "i") {
+                procesoT = procesoT + "imes";
+            }
+            else if (texto[i]== "a") {
+                procesoT = procesoT + "ai";
+            }
+            else if (texto[i]== "u") {
+                procesoT = procesoT + "ufat";
+            }
+            else{
+                procesoT = procesoT + texto[i];
+            }
+            
+        }
+        return procesoT;
+        
+    }
+
+    function desencriptar() {
+        modificacionCss()        
+        pasarTxt2()
+    }
+
+    function pasarTxt2() {
+        cajaTxt2.textContent = proceso2(recuperarTxt())
+    
+    }
+    
+    function proceso2(mensaje) {
+        var texto = mensaje;
+        var procesoT ="";
+
+        for (let i = 0; i < texto.length; i++) {
+            if (texto[i]== "e") {
+                procesoT = procesoT + "e";
+                i = i+4;
+            }
+            else if (texto[i]== "o") {
+                procesoT = procesoT + "o";
+                i = i+3;
+            }
+            else if (texto[i]== "i") {
+                procesoT = procesoT + "i";
+                i = i+3;
+            }
+            else if (texto[i]== "a") {
+                procesoT = procesoT + "a";
+                i = i +1;
+            }
+            else if (texto[i]== "u") {
+                procesoT = procesoT + "u";
+                i = i+3;
+            }
+            else{
+                procesoT = procesoT + texto[i];
+            }
+            
+        }
+        return procesoT;
+        
+    }    
+
+
+
+
+    
+
+</script>

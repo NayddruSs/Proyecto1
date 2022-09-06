@@ -1,0 +1,131 @@
+body{
+    background: rgb(143, 211, 207);
+}
+
+.contenedor{
+    margin: auto;
+    width: 960px;
+    height: 650px;
+    padding: 5px;
+}
+
+
+
+.titulo{
+    float: inherit;
+    margin-left: 20%;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.box1{
+    float: left;
+    width: 70%;
+    height: 60%;
+    border-radius: 32px;    
+    background: rgb(143, 211, 207);    
+}
+
+.areatxt{
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 75%;
+    height: auto;
+    resize: none;
+    outline: none;
+    border: none;
+    background: rgb(143, 211, 207);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #0a3871;
+}
+
+.box2{
+    float: right;
+    width: 288px;
+    height: 474px;
+    border-radius: 32px;
+    background: #D8DFE8;
+}
+.imgbox2{
+    margin-top: 10%;
+    margin-left: 7%;
+    width: 90%;
+}
+
+#mns{
+    margin-left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.txt2{
+    margin-left: 12%;
+    margin-top: 15px;
+    width: 75%;
+    text-align: center;
+    height: 140px;
+    resize: none;
+    outline: none;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #D8DFE8;
+    color: #0a3871;    
+}
+
+.aviso{
+    font-size: 12px;
+    margin-left: 2%;
+}
+
+.boton1{
+    float: left;
+    padding: 24px;
+    width: 30%;
+    height: 60%;
+    border-radius: 32px;
+    background: #0a3871;
+    color: #D8DFE8;
+}
+
+.boton1:active{
+    background: #7ec1db;
+}
+
+.boton2{
+    float: right;
+    padding: 24px;
+    width: 30%;
+    height: 60%;
+    border-radius: 32px;
+    background: #D8DFE8;
+    color: #0a3871;
+    
+}
+
+.boton2:active{    
+    background: #7ec1db;
+}
+
+.copiar{
+    display: none;
+    line-height: 0px;
+    text-align: center;
+    margin-top: 85%;
+    margin-left: 30%;
+    border-radius: 32px;
+    padding: 24px;
+    width: 40%;
+    height: 10%;
+    background: #D8DFE8;
+    color: #0a3871;
+}
+
+.copiar:active{
+    background: #7ec1db;
+}
+
+
+.datosDev{    
+    width: 500px;
+}    
